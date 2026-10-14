@@ -1,0 +1,89 @@
+name: CI / CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    name: Rust core (fmt, clippy, tests, ONNX parity)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: core
+      - run: cargo fmt --check
+      - run: cargo clippy --release --all-targets -- -D warnings
+      - run: cargo test --release
+      - name: Rust CNN inference matches ONNX Runtime
+        run: cargo run --release --bin ffsim -- parity --model ../model/congestion.json --fixture ../results/parity_fixture.json
+      - name: Smoke benchmark (one-shot MAPF)
+        run: cargo run --release --bin ffsim -- mapf --instances 3 > /dev/null
+      - run: cargo check --release --target wasm32-unknown-unknown
+
+  python:
+    name: ML pipeline (pytest, ONNX export)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r ml/requirements.txt
+      - run: python -m pytest -q ml/test_ml.py
+
+  deploy:
+    name: Build WebAssembly demo and deploy to GitHub Pages
+    needs: [rust, python]
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: core
+      - uses: jetli/wasm-pack-action@v0.4.0
+      - run: wasm-pack build core --release --target web --out-dir ../web/pkg
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r ml/requirements.txt
+      - name: Export ONNX from the committed weights
+        working-directory: ml
+        run: python export_onnx.py --weights ../model/congestion.json --out ../model/congestion.onnx
+      - name: Assemble site
+        run: |
+          mkdir -p site/model site/data
+          cp -r web/index.html web/style.css web/app.js web/pkg site/
+          rm -f site/pkg/.gitignore
+          cp model/congestion.onnx model/congestion.json site/model/
+          cp results/bench_lifelong.json results/mapf.json results/train_report.json site/data/
+          touch site/.nojekyll
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true

@@ -1,0 +1,1154 @@
+[
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 29.642298380533855,
+    "plan_ms_per_replan": 0.2821237656492848,
+    "robots": 20,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.85586929321289,
+        "moves": 19861,
+        "plan_ms_per_replan": 0.30317197278911584,
+        "tasks": 673,
+        "throughput": 560.8333129882812,
+        "waits": 139
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.91964340209961,
+        "moves": 19875,
+        "plan_ms_per_replan": 0.26937455414746514,
+        "tasks": 672,
+        "throughput": 560.0,
+        "waits": 125
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.151382446289062,
+        "moves": 19843,
+        "plan_ms_per_replan": 0.27382477001127353,
+        "tasks": 687,
+        "throughput": 572.5,
+        "waits": 157
+      }
+    ],
+    "seeds": 3,
+    "throughput": 564.4444376627604,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 140.33333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 29.51509666442871,
+    "plan_ms_per_replan": 0.2867631750088467,
+    "robots": 20,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.8050594329834,
+        "moves": 19875,
+        "plan_ms_per_replan": 0.29192994438138675,
+        "tasks": 672,
+        "throughput": 560.0,
+        "waits": 125
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.719999313354492,
+        "moves": 19847,
+        "plan_ms_per_replan": 0.27508891705068683,
+        "tasks": 675,
+        "throughput": 562.5,
+        "waits": 153
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.020231246948242,
+        "moves": 19830,
+        "plan_ms_per_replan": 0.2932706635944665,
+        "tasks": 692,
+        "throughput": 576.6666870117188,
+        "waits": 170
+      }
+    ],
+    "seeds": 3,
+    "throughput": 566.3888956705729,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 149.33333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 29.873524347941082,
+    "plan_ms_per_replan": 0.4260842260274293,
+    "robots": 20,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 30.06917381286621,
+        "moves": 19840,
+        "plan_ms_per_replan": 0.44044301371429223,
+        "tasks": 665,
+        "throughput": 554.1666870117188,
+        "waits": 160
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.85438346862793,
+        "moves": 19857,
+        "plan_ms_per_replan": 0.4174428638985121,
+        "tasks": 673,
+        "throughput": 560.8333129882812,
+        "waits": 143
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 29.6970157623291,
+        "moves": 19836,
+        "plan_ms_per_replan": 0.42036680046948344,
+        "tasks": 670,
+        "throughput": 558.3333129882812,
+        "waits": 164
+      }
+    ],
+    "seeds": 3,
+    "throughput": 557.7777709960938,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 155.66666666666666
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 12.294083404840498,
+    "mean_task_time": 29.563541412353516,
+    "plan_ms_per_replan": 0.42512686288197843,
+    "robots": 20,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.807364543700311,
+        "mean_task_time": 29.8050594329834,
+        "moves": 19875,
+        "plan_ms_per_replan": 0.41146557661746325,
+        "tasks": 672,
+        "throughput": 560.0,
+        "waits": 125
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.313009727272815,
+        "mean_task_time": 29.70414161682129,
+        "moves": 19848,
+        "plan_ms_per_replan": 0.4292022965909031,
+        "tasks": 676,
+        "throughput": 563.3333129882812,
+        "waits": 152
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.761875943548366,
+        "mean_task_time": 29.18142318725586,
+        "moves": 19831,
+        "plan_ms_per_replan": 0.43471271543756906,
+        "tasks": 689,
+        "throughput": 574.1666870117188,
+        "waits": 169
+      }
+    ],
+    "seeds": 3,
+    "throughput": 565.8333333333334,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 148.66666666666666
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 31.164087295532227,
+    "plan_ms_per_replan": 1.0157657636508504,
+    "robots": 40,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 31.025463104248047,
+        "moves": 39161,
+        "plan_ms_per_replan": 1.0396258923395616,
+        "tasks": 1296,
+        "throughput": 1080.0,
+        "waits": 839
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 31.383529663085938,
+        "moves": 38696,
+        "plan_ms_per_replan": 0.9240171332645061,
+        "tasks": 1275,
+        "throughput": 1062.5,
+        "waits": 1304
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 31.083269119262695,
+        "moves": 38482,
+        "plan_ms_per_replan": 1.083654265348484,
+        "tasks": 1285,
+        "throughput": 1070.8333740234375,
+        "waits": 1518
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1071.1111246744792,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 1220.3333333333333
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 31.034950256347656,
+    "plan_ms_per_replan": 0.908246336004944,
+    "robots": 40,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 31.35082244873047,
+        "moves": 38597,
+        "plan_ms_per_replan": 0.9920434637684182,
+        "tasks": 1277,
+        "throughput": 1064.1666259765625,
+        "waits": 1403
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 30.931941986083984,
+        "moves": 38924,
+        "plan_ms_per_replan": 0.8424289355508617,
+        "tasks": 1293,
+        "throughput": 1077.5,
+        "waits": 1076
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 30.822086334228516,
+        "moves": 38781,
+        "plan_ms_per_replan": 0.8902666086955522,
+        "tasks": 1304,
+        "throughput": 1086.6666259765625,
+        "waits": 1219
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1076.111083984375,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 1232.6666666666667
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 33.838461558024086,
+    "plan_ms_per_replan": 1.4208174795890345,
+    "robots": 40,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 33.88727569580078,
+        "moves": 38866,
+        "plan_ms_per_replan": 1.4819320595609573,
+        "tasks": 1171,
+        "throughput": 975.8333129882812,
+        "waits": 1134
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 33.79830551147461,
+        "moves": 38942,
+        "plan_ms_per_replan": 1.4315626102941434,
+        "tasks": 1180,
+        "throughput": 983.3333129882812,
+        "waits": 1058
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 33.829803466796875,
+        "moves": 38833,
+        "plan_ms_per_replan": 1.3489577689120025,
+        "tasks": 1181,
+        "throughput": 984.1666870117188,
+        "waits": 1167
+      }
+    ],
+    "seeds": 3,
+    "throughput": 981.1111043294271,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 1119.6666666666667
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 12.029828933548288,
+    "mean_task_time": 30.539868036905926,
+    "plan_ms_per_replan": 1.105143022674079,
+    "robots": 40,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.91811108169604,
+        "mean_task_time": 30.699922561645508,
+        "moves": 39125,
+        "plan_ms_per_replan": 1.0931263805582456,
+        "tasks": 1303,
+        "throughput": 1085.8333740234375,
+        "waits": 875
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.000698165118996,
+        "mean_task_time": 30.587106704711914,
+        "moves": 39141,
+        "plan_ms_per_replan": 1.0950773034058303,
+        "tasks": 1303,
+        "throughput": 1085.8333740234375,
+        "waits": 859
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.170677553829824,
+        "mean_task_time": 30.33257484436035,
+        "moves": 39027,
+        "plan_ms_per_replan": 1.127225384058161,
+        "tasks": 1320,
+        "throughput": 1100.0,
+        "waits": 973
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1090.5555826822917,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 902.3333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 35.07156117757162,
+    "plan_ms_per_replan": 2.1935587432123564,
+    "robots": 60,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 34.33201217651367,
+        "moves": 55214,
+        "plan_ms_per_replan": 2.1172655055835237,
+        "tasks": 1765,
+        "throughput": 1470.8333740234375,
+        "waits": 4786
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 35.634422302246094,
+        "moves": 52441,
+        "plan_ms_per_replan": 2.5207131137295455,
+        "tasks": 1685,
+        "throughput": 1404.1666259765625,
+        "waits": 7559
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 35.24824905395508,
+        "moves": 53322,
+        "plan_ms_per_replan": 1.9426976103240001,
+        "tasks": 1712,
+        "throughput": 1426.6666259765625,
+        "waits": 6678
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1433.8888753255208,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 6341.0
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 33.920599619547524,
+    "plan_ms_per_replan": 1.9125197397612412,
+    "robots": 60,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 34.72507095336914,
+        "moves": 54758,
+        "plan_ms_per_replan": 1.966078955420586,
+        "tasks": 1735,
+        "throughput": 1445.8333740234375,
+        "waits": 5242
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 33.79841995239258,
+        "moves": 54606,
+        "plan_ms_per_replan": 1.9364350843495741,
+        "tasks": 1771,
+        "throughput": 1475.8333740234375,
+        "waits": 5394
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 33.23830795288086,
+        "moves": 55425,
+        "plan_ms_per_replan": 1.8350451795135636,
+        "tasks": 1796,
+        "throughput": 1496.6666259765625,
+        "waits": 4575
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1472.7777913411458,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 5070.333333333333
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 42.73851013183594,
+    "plan_ms_per_replan": 3.473434983366415,
+    "robots": 60,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 44.41611862182617,
+        "moves": 55685,
+        "plan_ms_per_replan": 3.2602925327199435,
+        "tasks": 1365,
+        "throughput": 1137.5,
+        "waits": 4315
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 41.494110107421875,
+        "moves": 56159,
+        "plan_ms_per_replan": 3.620247890143958,
+        "tasks": 1443,
+        "throughput": 1202.5,
+        "waits": 3841
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 42.305301666259766,
+        "moves": 55562,
+        "plan_ms_per_replan": 3.5397645272353433,
+        "tasks": 1415,
+        "throughput": 1179.1666259765625,
+        "waits": 4438
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1173.0555419921875,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 4198.0
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 12.309134892820289,
+    "mean_task_time": 32.26522954305013,
+    "plan_ms_per_replan": 2.16433365483921,
+    "robots": 60,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.263574598385436,
+        "mean_task_time": 32.21528625488281,
+        "moves": 57396,
+        "plan_ms_per_replan": 2.1636610514628307,
+        "tasks": 1858,
+        "throughput": 1548.3333740234375,
+        "waits": 2604
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.569507777443418,
+        "mean_task_time": 32.44678497314453,
+        "moves": 57449,
+        "plan_ms_per_replan": 2.2129843806651737,
+        "tasks": 1851,
+        "throughput": 1542.5,
+        "waits": 2551
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.094322302632017,
+        "mean_task_time": 32.13361740112305,
+        "moves": 57501,
+        "plan_ms_per_replan": 2.1163555323896266,
+        "tasks": 1871,
+        "throughput": 1559.1666259765625,
+        "waits": 2499
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1550.0,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 2551.3333333333335
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 38.33722050984701,
+    "plan_ms_per_replan": 3.9543964310570474,
+    "robots": 80,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 38.200096130371094,
+        "moves": 68446,
+        "plan_ms_per_replan": 3.9899741608041674,
+        "tasks": 2099,
+        "throughput": 1749.1666259765625,
+        "waits": 11554
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 37.646575927734375,
+        "moves": 67416,
+        "plan_ms_per_replan": 3.581141853413835,
+        "tasks": 2074,
+        "throughput": 1728.3333740234375,
+        "waits": 12584
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 39.16498947143555,
+        "moves": 65404,
+        "plan_ms_per_replan": 4.292073278953141,
+        "tasks": 1988,
+        "throughput": 1656.6666259765625,
+        "waits": 14596
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1711.3888753255208,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 12911.333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 38.100701649983726,
+    "plan_ms_per_replan": 3.998673335870157,
+    "robots": 80,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 37.93320846557617,
+        "moves": 66996,
+        "plan_ms_per_replan": 3.67513409191963,
+        "tasks": 2111,
+        "throughput": 1759.1666259765625,
+        "waits": 13004
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 37.20893478393555,
+        "moves": 68730,
+        "plan_ms_per_replan": 3.774538028140578,
+        "tasks": 2149,
+        "throughput": 1790.8333740234375,
+        "waits": 11270
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 39.15996170043945,
+        "moves": 66043,
+        "plan_ms_per_replan": 4.546347887550263,
+        "tasks": 2038,
+        "throughput": 1698.3333740234375,
+        "waits": 13957
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1749.4444580078125,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 12743.666666666666
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 53.065467834472656,
+    "plan_ms_per_replan": 6.011497090453669,
+    "robots": 80,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 53.771331787109375,
+        "moves": 70386,
+        "plan_ms_per_replan": 6.124339658163793,
+        "tasks": 1500,
+        "throughput": 1250.0,
+        "waits": 9614
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 52.33002471923828,
+        "moves": 70355,
+        "plan_ms_per_replan": 5.751841923155329,
+        "tasks": 1512,
+        "throughput": 1260.0,
+        "waits": 9645
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 53.09504699707031,
+        "moves": 70059,
+        "plan_ms_per_replan": 6.158309690041885,
+        "tasks": 1494,
+        "throughput": 1245.0,
+        "waits": 9941
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1251.6666666666667,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 9733.333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 12.008243846154322,
+    "mean_task_time": 33.736123402913414,
+    "plan_ms_per_replan": 3.2775616235099085,
+    "robots": 80,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.857328596386095,
+        "mean_task_time": 33.59369659423828,
+        "moves": 75078,
+        "plan_ms_per_replan": 3.2002586726907265,
+        "tasks": 2380,
+        "throughput": 1983.3333740234375,
+        "waits": 4922
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.032387250000813,
+        "mean_task_time": 33.825443267822266,
+        "moves": 75199,
+        "plan_ms_per_replan": 3.254718245984034,
+        "tasks": 2366,
+        "throughput": 1971.6666259765625,
+        "waits": 4801
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 12.135015692076061,
+        "mean_task_time": 33.78923034667969,
+        "moves": 74824,
+        "plan_ms_per_replan": 3.3777079518549655,
+        "tasks": 2377,
+        "throughput": 1980.8333740234375,
+        "waits": 5176
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1978.6111246744792,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 4966.333333333333
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 40.568477630615234,
+    "plan_ms_per_replan": 14.622946114120127,
+    "robots": 100,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 41.685001373291016,
+        "moves": 79405,
+        "plan_ms_per_replan": 7.167212026025961,
+        "tasks": 2400,
+        "throughput": 2000.0,
+        "waits": 20595
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 39.65483856201172,
+        "moves": 11591,
+        "plan_ms_per_replan": 19.681052727135462,
+        "tasks": 310,
+        "throughput": 258.3333435058594,
+        "waits": 88409
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 40.36559295654297,
+        "moves": 6869,
+        "plan_ms_per_replan": 17.02057358919896,
+        "tasks": 186,
+        "throughput": 155.0,
+        "waits": 93131
+      }
+    ],
+    "seeds": 3,
+    "throughput": 804.4444478352865,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 67378.33333333333
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 39.108567555745445,
+    "plan_ms_per_replan": 16.132510039106695,
+    "robots": 100,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 37.709678649902344,
+        "moves": 16856,
+        "plan_ms_per_replan": 17.14700328137166,
+        "tasks": 465,
+        "throughput": 387.5,
+        "waits": 83144
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 40.568965911865234,
+        "moves": 21786,
+        "plan_ms_per_replan": 14.260153828767425,
+        "tasks": 638,
+        "throughput": 531.6666870117188,
+        "waits": 78214
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 39.04705810546875,
+        "moves": 3207,
+        "plan_ms_per_replan": 16.990373007181002,
+        "tasks": 85,
+        "throughput": 70.83333587646484,
+        "waits": 96793
+      }
+    ],
+    "seeds": 3,
+    "throughput": 330.00000762939453,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 86050.33333333333
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 65.57131703694661,
+    "plan_ms_per_replan": 10.050664162431056,
+    "robots": 100,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 64.09247589111328,
+        "moves": 82866,
+        "plan_ms_per_replan": 10.28676133299271,
+        "tasks": 1568,
+        "throughput": 1306.6666259765625,
+        "waits": 17134
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 66.4969711303711,
+        "moves": 82267,
+        "plan_ms_per_replan": 9.423398061726964,
+        "tasks": 1487,
+        "throughput": 1239.1666259765625,
+        "waits": 17733
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 66.12450408935547,
+        "moves": 82262,
+        "plan_ms_per_replan": 10.441833092573493,
+        "tasks": 1510,
+        "throughput": 1258.3333740234375,
+        "waits": 17738
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1268.0555419921875,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 17535.0
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 11.703641836639234,
+    "mean_task_time": 36.404083251953125,
+    "plan_ms_per_replan": 4.710728513748205,
+    "robots": 100,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.8015745530008,
+        "mean_task_time": 36.32315444946289,
+        "moves": 90944,
+        "plan_ms_per_replan": 4.697029918998655,
+        "tasks": 2751,
+        "throughput": 2292.5,
+        "waits": 9056
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.691037403807995,
+        "mean_task_time": 36.34304428100586,
+        "moves": 91630,
+        "plan_ms_per_replan": 4.744136964929227,
+        "tasks": 2746,
+        "throughput": 2288.333251953125,
+        "waits": 8370
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.618313553108905,
+        "mean_task_time": 36.546051025390625,
+        "moves": 91070,
+        "plan_ms_per_replan": 4.691018657316734,
+        "tasks": 2747,
+        "throughput": 2289.166748046875,
+        "waits": 8930
+      }
+    ],
+    "seeds": 3,
+    "throughput": 2290.0,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 8785.333333333334
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 36.14484659830729,
+    "plan_ms_per_replan": 19.32324390821985,
+    "robots": 120,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 36.12582778930664,
+        "moves": 4808,
+        "plan_ms_per_replan": 17.96047701500104,
+        "tasks": 151,
+        "throughput": 125.83333587646484,
+        "waits": 115192
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 34.986488342285156,
+        "moves": 2434,
+        "plan_ms_per_replan": 17.60035010439475,
+        "tasks": 74,
+        "throughput": 61.66666793823242,
+        "waits": 117566
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 37.32222366333008,
+        "moves": 3249,
+        "plan_ms_per_replan": 22.408904605263768,
+        "tasks": 90,
+        "throughput": 75.0,
+        "waits": 116751
+      }
+    ],
+    "seeds": 3,
+    "throughput": 87.50000127156575,
+    "ticks": 1000,
+    "variant": "greedy",
+    "waits": 116503.0
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 38.44242477416992,
+    "plan_ms_per_replan": 19.96399203908806,
+    "robots": 120,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 35.48847961425781,
+        "moves": 7277,
+        "plan_ms_per_replan": 19.2628073524841,
+        "tasks": 217,
+        "throughput": 180.8333282470703,
+        "waits": 112723
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 39.80952453613281,
+        "moves": 774,
+        "plan_ms_per_replan": 22.01871133013148,
+        "tasks": 21,
+        "throughput": 17.5,
+        "waits": 119226
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 40.02927017211914,
+        "moves": 7837,
+        "plan_ms_per_replan": 18.610457434648588,
+        "tasks": 205,
+        "throughput": 170.8333282470703,
+        "waits": 112163
+      }
+    ],
+    "seeds": 3,
+    "throughput": 123.05555216471355,
+    "ticks": 1000,
+    "variant": "hungarian",
+    "waits": 114704.0
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 0.0,
+    "mean_task_time": 75.78659057617188,
+    "plan_ms_per_replan": 12.078320928257591,
+    "robots": 120,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 74.05874633789062,
+        "moves": 94545,
+        "plan_ms_per_replan": 12.253451276356971,
+        "tasks": 1600,
+        "throughput": 1333.3333740234375,
+        "waits": 25455
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 76.63057708740234,
+        "moves": 94185,
+        "plan_ms_per_replan": 12.195364025692557,
+        "tasks": 1524,
+        "throughput": 1270.0,
+        "waits": 25815
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 0.0,
+        "mean_task_time": 76.67044830322266,
+        "moves": 94355,
+        "plan_ms_per_replan": 11.786147482723246,
+        "tasks": 1587,
+        "throughput": 1322.5,
+        "waits": 25645
+      }
+    ],
+    "seeds": 3,
+    "throughput": 1308.6111246744792,
+    "ticks": 1000,
+    "variant": "hungarian+density",
+    "waits": 25638.333333333332
+  },
+  {
+    "collisions": 0.0,
+    "fallback_stops": 0.0,
+    "infer_ms_per_replan": 10.94885157760878,
+    "mean_task_time": 42.90979512532552,
+    "plan_ms_per_replan": 6.554769364312019,
+    "robots": 120,
+    "runs": [
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.042152844689262,
+        "mean_task_time": 44.2926025390625,
+        "moves": 106092,
+        "plan_ms_per_replan": 6.740107819642582,
+        "tasks": 2717,
+        "throughput": 2264.166748046875,
+        "waits": 13908
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 11.014143633629635,
+        "mean_task_time": 42.03150177001953,
+        "moves": 106404,
+        "plan_ms_per_replan": 6.433609254254439,
+        "tasks": 2857,
+        "throughput": 2380.833251953125,
+        "waits": 13596
+      },
+      {
+        "collisions": 0,
+        "fallback_stops": 0,
+        "infer_ms_per_replan": 10.790258254507442,
+        "mean_task_time": 42.40528106689453,
+        "moves": 105973,
+        "plan_ms_per_replan": 6.490591019039035,
+        "tasks": 2840,
+        "throughput": 2366.666748046875,
+        "waits": 14027
+      }
+    ],
+    "seeds": 3,
+    "throughput": 2337.2222493489585,
+    "ticks": 1000,
+    "variant": "hungarian+learned",
+    "waits": 13843.666666666666
+  }
+]
