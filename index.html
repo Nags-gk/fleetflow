@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FleetFlow: multi-robot warehouse coordination</title>
+<meta name="description" content="Live WebAssembly demo: multi-robot path finding, Hungarian task assignment and a learned congestion forecast keeping a warehouse fleet out of gridlock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#">FleetFlow</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#results">Results</a>
+      <a href="#mapf">Path-finding lab</a>
+      <a href="https://github.com/Nags-gk/fleetflow">Source on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <h1>Same floor, same robots, same orders. One fleet routes around traffic jams before they form.</h1>
+    <p class="lede">Both warehouses below run the same Rust planner compiled to WebAssembly: Hungarian task assignment and collision-free space-time A*. The right-hand fleet also asks a small neural network where robots will be stuck waiting over the next 8 ticks, and routes around those cells.</p>
+
+    <div class="controls" role="group" aria-label="Simulation controls">
+      <label><span>Robots: <output id="robotsOut">100</output></span>
+        <input id="robots" type="range" min="20" max="140" step="10" value="100">
+      </label>
+      <label><span>Speed: <output id="speedOut">4</output> ticks per frame</span>
+        <input id="speed" type="range" min="1" max="12" step="1" value="4">
+      </label>
+      <label class="check"><input id="heat" type="checkbox" checked> Show the congestion forecast</label>
+      <button id="play" class="primary" type="button">Pause</button>
+      <button id="reset" type="button">Restart with new orders</button>
+    </div>
+
+    <div class="floors">
+      <figure class="floor" id="floorA">
+        <figcaption>
+          <h2>Shortest-time routing</h2>
+          <p>Every robot takes its fastest collision-free route.</p>
+        </figcaption>
+        <canvas width="600" height="390" aria-label="Warehouse floor, baseline planner"></canvas>
+        <dl class="readout">
+          <div><dt>Orders delivered</dt><dd data-k="tasks">0</dd></div>
+          <div><dt>Per 1,000 ticks</dt><dd data-k="thr">0</dd></div>
+          <div><dt>Robots stuck now</dt><dd data-k="stuck">0</dd></div>
+          <div><dt>Collisions</dt><dd data-k="coll">0</dd></div>
+        </dl>
+      </figure>
+      <figure class="floor learned" id="floorB">
+        <figcaption>
+          <h2>Routing with the congestion forecast</h2>
+          <p>Cells the model expects to jam cost extra. <span id="engine" class="engine">Loading model…</span></p>
+        </figcaption>
+        <canvas width="600" height="390" aria-label="Warehouse floor, congestion-aware planner"></canvas>
+        <dl class="readout">
+          <div><dt>Orders delivered</dt><dd data-k="tasks">0</dd></div>
+          <div><dt>Per 1,000 ticks</dt><dd data-k="thr">0</dd></div>
+          <div><dt>Robots stuck now</dt><dd data-k="stuck">0</dd></div>
+          <div><dt>Collisions</dt><dd data-k="coll">0</dd></div>
+        </dl>
+      </figure>
+    </div>
+    <ul class="legend" aria-label="Legend">
+      <li><i class="sw pod"></i>Storage pods</li>
+      <li><i class="sw station"></i>Pick stations</li>
+      <li><i class="sw fetch"></i>Robot driving to a pod</li>
+      <li><i class="sw carry"></i>Robot carrying a pod to a station</li>
+      <li><i class="sw heat"></i>Forecast congestion</li>
+    </ul>
+  </section>
+
+  <section id="how" class="band">
+    <div class="wrap">
+      <h2 class="sec">What happens every planning cycle</h2>
+      <ol class="steps">
+        <li><h3>Assign orders</h3><p>Idle robots are matched to open orders with the Hungarian algorithm, the exact solution of the assignment linear program, minimising total drive distance. A greedy matcher is kept as a baseline.</p></li>
+        <li><h3>Forecast congestion</h3><p>A 7.7k-parameter dilated CNN reads a 5-channel snapshot of the floor (pods, stations, robots, destinations, next 8 steps of intent) and predicts where robots will be forced to wait. Trained in PyTorch, exported to ONNX, run here with ONNX Runtime Web.</p></li>
+        <li><h3>Plan collision-free paths</h3><p>Windowed prioritized planning with space-time A* and a vertex/edge reservation table. Forecast hotspots add cost; each robot's own footprint is removed first so it is not pushed off its own route. A conservative fallback pass guarantees a feasible plan every cycle.</p></li>
+        <li><h3>Execute and verify</h3><p>Robots execute the first steps, re-planning on a fixed cadence or as soon as one finishes a leg. An independent validator checks every tick for two robots in one cell or swapping places.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="results" class="wrap">
+    <h2 class="sec">Results from the native benchmark</h2>
+    <p class="note" id="benchNote">Loading benchmark data…</p>
+    <div class="chart" id="thrChart" role="img" aria-label="Throughput versus fleet size"></div>
+    <div class="tables">
+      <div>
+        <h3>Congestion forecast accuracy, held-out simulations</h3>
+        <table id="modelTable"><thead><tr><th>Predictor</th><th>Pearson r</th><th>MSE</th><th>Hotspot recall</th></tr></thead><tbody></tbody></table>
+      </div>
+      <div>
+        <h3>One-shot path finding: Conflict-Based Search vs prioritized planning</h3>
+        <table id="mapfTable"><thead><tr><th>Robots</th><th>CBS solved</th><th>Prioritized solved</th><th>Prioritized extra cost</th><th>CBS time</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section id="mapf" class="band">
+    <div class="wrap mapf">
+      <div class="mapf-text">
+        <h2 class="sec">Path-finding lab</h2>
+        <p>Drop a group of robots at random cells with random destinations and solve it two ways. Conflict-Based Search finds the minimum total travel time; prioritized planning is faster but can be worse or fail outright.</p>
+        <div class="controls compact">
+          <label><span>Robots: <output id="kOut">10</output></span>
+            <input id="k" type="range" min="2" max="16" value="10">
+          </label>
+          <button id="solve" class="primary" type="button">Solve a new instance</button>
+        </div>
+        <table id="labTable"><thead><tr><th></th><th>Total travel time</th><th>Makespan</th><th>Constraint-tree nodes</th><th>Solve time</th></tr></thead><tbody></tbody></table>
+      </div>
+      <canvas id="labCanvas" width="480" height="260" aria-label="Path-finding lab"></canvas>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Built by Nagaraj Gireppa Kanni. Rust core, PyTorch training, ONNX Runtime Web inference, deployed by GitHub Actions. <a href="https://github.com/Nags-gk/fleetflow">Read the code and benchmark methodology</a>.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

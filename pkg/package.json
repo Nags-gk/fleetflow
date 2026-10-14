@@ -1,0 +1,14 @@
+{
+  "name": "fleetflow-core",
+  "description": "Multi-robot warehouse fleet coordination: MAPF (CBS, space-time A*), Hungarian task assignment, congestion-aware lifelong simulation",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "fleetflow_core_bg.wasm",
+    "fleetflow_core.js",
+    "fleetflow_core.d.ts"
+  ],
+  "module": "fleetflow_core.js",
+  "types": "fleetflow_core.d.ts",
+  "sideEffects": false
+}
